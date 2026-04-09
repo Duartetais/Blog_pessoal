@@ -17,7 +17,7 @@
 
 ---
 
-# 🖋️ InkFlow - Blog Pessoal
+# 🖋️ Blog Pessoal
 
 O **InkFlow** é uma API robusta construída com **NestJS**, desenvolvida para o gerenciamento de postagens de um blog. Este projeto foca na implementação de um CRUD completo, integrando validações e persistência de dados.
 
