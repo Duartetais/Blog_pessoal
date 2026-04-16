@@ -108,4 +108,3 @@ src/
 </a>
 </p>
 ---
-**Desenvolvido por Tais Bernardi 👩‍💻**
