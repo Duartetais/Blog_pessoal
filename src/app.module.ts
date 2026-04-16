@@ -9,7 +9,8 @@ import { TemaModule } from './tema/tema.module';
 import { AuthModule } from './auth/auth.module';
 import { UsuarioModule } from './usuario/usuario.module';
 import { Usuario } from './usuario/entities/usuario.entity';
-import { ConfigModule } from '@nestjs/config/dist/config.module';
+import { ConfigModule } from '@nestjs/config';
+import { ProdService } from './data/services/prod.service';
 
 @Module({
   imports: [
@@ -19,9 +20,9 @@ import { ConfigModule } from '@nestjs/config/dist/config.module';
       host: process.env.DB_HOST || '127.0.0.1',
       port: Number(process.env.DB_PORT) || 3306,
       username: process.env.DB_USERNAME || 'root',
-      password: process.env.DB_PASSWORD,
+      password: process.env.DB_PASSWORD || 'K@m1la12',
       database: process.env.DB_DATABASE || 'db_blogpessoal',
-      entities: [__dirname + '/*/.entity{.ts,.js}'],
+      entities: [Postagem, Tema, Usuario],
       synchronize: true,
     }),
     PostagemModule,
