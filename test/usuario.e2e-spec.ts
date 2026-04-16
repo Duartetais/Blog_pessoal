@@ -3,6 +3,7 @@ import { INestApplication } from '@nestjs/common';
 import * as request from 'supertest';
 import { AppModule } from './../src/app.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { describe } from 'node:test';
 
 describe('Testes dos Módulos Usuário e Auth (e2e)', () => {
   let app: INestApplication;
@@ -29,3 +30,11 @@ describe('Testes dos Módulos Usuário e Auth (e2e)', () => {
   });
   
 });
+
+function beforeAll(arg0: () => Promise<void>) {
+  throw new Error('Function not implemented.');
+}
+function afterAll(arg0: () => Promise<void>) {
+  throw new Error('Function not implemented.');
+}
+
