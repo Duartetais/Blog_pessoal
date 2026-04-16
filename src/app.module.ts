@@ -11,19 +11,13 @@ import { UsuarioModule } from './usuario/usuario.module';
 import { Usuario } from './usuario/entities/usuario.entity';
 import { ConfigModule } from '@nestjs/config';
 import { ProdService } from './data/services/prod.service';
+import { DevService } from './data/services/dev.service';
 
 @Module({
   imports: [
     ConfigModule.forRoot(),
-    TypeOrmModule.forRoot({
-      type: 'postgres',
-      host: process.env.DB_HOST || '127.0.0.1',
-      port: Number(process.env.DB_PORT) || 3306,
-      username: process.env.DB_USERNAME || 'root',
-      password: process.env.DB_PASSWORD || 'K@m1la12',
-      database: process.env.DB_DATABASE || 'db_blogpessoal',
-      entities: [Postagem, Tema, Usuario],
-      synchronize: true,
+    TypeOrmModule.forRootAsync({
+        useClass: process.env.NODE_ENV === 'production' ? ProdService : DevService,
     }),
     PostagemModule,
     TemaModule,
