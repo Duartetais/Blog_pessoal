@@ -22,8 +22,7 @@
 ## 🌐 Deploy & Demo
 
 * **🔗 API Base:** [https://blog-pessoal-gh04.onrender.com/](https://blog-pessoal-gh04.onrender.com/)  
-* **📚 Swagger UI:** [https://blog-pessoal-gh04.onrender.com/swagger](https://blog-pessoal-gh04.onrender.com/swagger) *(Verifique a rota exata no seu `main.ts`)*
-
+* **📚 Swagger UI:** [https://blog-pessoal-gh04.onrender.com/swagger](https://blog-pessoal-gh04.onrender.com/swagger) 
 ---
 
 ## 🔐 Funcionalidades de Autenticação
